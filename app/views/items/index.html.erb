@@ -1,0 +1,20 @@
+<h1> Anamika Fashion House</h1>
+<ul>
+	<% @items.each do |item| %>
+	<li>
+	<%=	link_to(item.name, item_path(item)) %>
+	<%=	link_to("edit", edit_item_path(item)) %>
+	<%= link_to 'Destroy', item_path(item),  method: :delete, data: { confirm: 'Are you sure?' } %>
+	<%=	item.quality %>
+
+	</li>
+	<% end %>
+</ul>
+
+
+<%= link_to("Create new items", new_item_path) %>
+
+
+
+
+
