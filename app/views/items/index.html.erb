@@ -5,7 +5,7 @@
 	<%=	link_to(item.name, item_path(item)) %>
 	<%=	link_to("edit", edit_item_path(item)) %>
 	<%= link_to 'Destroy', item_path(item),  method: :delete, data: { confirm: 'Are you sure?' } %>
-	<%=	item.quantity %>
+	
 	<%=	item.quality %>
 </li>
 	<% end %>
